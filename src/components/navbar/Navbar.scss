@@ -1,8 +1,17 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #013914;
   color: white;
+  transition: 0.5 all ease;
+  position: sticky;
+  top: 0;
+
+  &.active {
+    background-color: white;
+    color: black;
+  }
   .container {
     width: 1400px;
     display: flex;
@@ -22,6 +31,39 @@
       align-items: center;
       gap: 24px;
       font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+
+      .user {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .options {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: gray;
+          width: 200px;
+          font-weight: 300;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          border: 1px solid gray;
+        }
+      }
+
       button {
         color: white;
         background-color: transparent;
@@ -35,5 +77,19 @@
         }
       }
     }
+  }
+  hr {
+    width: 100%;
+    height: 0;
+    border: 0.5px solid rgba(232, 230, 230, 0.598);
+  }
+  .menu {
+    width: 1400px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
   }
 }

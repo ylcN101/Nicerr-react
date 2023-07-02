@@ -4,7 +4,7 @@ import React from 'react'
 
 const GigCard = ({ item }) => {
   return (
-    <Link to="/gig/123" className="link">
+    <Link to={`/gig/${item.id}`} className="link">
       <div className="gigCard">
         <img src={item.img} alt="Gig Image" />
         <div className="info">
